@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= json.project.seo_title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="__sync_contentCategory" content="meterA">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+    <%= !json.project.embedded ? t.include("partials/_paywall.html") : t.include("partials/_embedframe.html") %>
+
+    <%= t.include("partials/_head.html") %>
+
+  </head>
+
+  <%= !json.project.embedded ? "<body>" : "<body is='responsive-body'>" %>
+
+    <%= t.include("partials/_nav.html") %>
+
+
+    <div class="scrolly-interactive">
+
+      <div class="hed-wrapper">
+        <div class="hed">The Drive to Dominance</div>
+        <div class="deck">While the Cavaliers' fortunes have been tied directly to the comings and goings of LeBron James, the Warriors had only glimpses of success before drafting the core of a team that set an NBA record with 73 wins and is looking for its second title in three seasons.</div>
+        <div class="instructions">Scroll down to see how we got to Warriors-Cavs, Part III.<i class="fa fa-angle-double-down" aria-hidden="true"></i></div>
+      </div>
+
+      <div id="stick-here"></div>
+      <div class="interactive-box" id="stick-me">
+
+        <div class="fact-container">
+          <div id="season"></div>
+          <div id="warriors-fact" class="fact"></div>
+          <div id="cavs-fact" class="fact"></div>
+        </div>
+
+        <div class="chart-container">
+          <div id="line-chart"></div>
+        </div>
+
+      </div>
+      <div id="stick-ph"></div>
+      <div id="stop-stick-here"></div>
+
+    </div>
+
+    <div class="credit-container">
+      <div class="credit">Graphics: Mike Massa, John Blanchard, Daymond Gascon and Danielle Mollette-Parks</div>
+      <div class="credit">Interactive producer: Emma O'Neill • <a href="mailto:eoneill@sfchronicle.com">eoneill@sfchronicle.com</a> • <a href = "https://twitter.com/emmaruthoneill" target="_blank">@emmaruthoneill</a></div>
+    </div>
+
+    <div class="photo-link">
+      <a href="http://www.sfchronicle.com/nba-finals/" target="_blank">
+        <div class="inline-img">
+          <div class="link-text">Read more Chronicle NBA finals coverage <i class="fa fa-hand-o-right" aria-hidden="true"></i></div>
+          <img src="./assets/photos/nba.jpg"></img>
+        </div>
+      </a>
+    </div>
+
+    <%= t.include("partials/_footer.html") %>
+
+    <script>
+      var statsData = <%= JSON.stringify(json.data) %>
+    </script>
+
+    <script src="app.js" async></script>
+    <%= t.include("partials/_helloSFC.html") %>
+
+  </body>
+</html>

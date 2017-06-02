@@ -1,0 +1,261 @@
+.scrolly-interactive {
+  margin-top: 100px;
+  line-height: 1.3;
+  @media @mobile {
+    margin-top: 50px;
+    line-height: 1.3;
+  }
+  margin-bottom: 100px;
+  font-family: @block-graphics;
+  font-size: 16px;
+  .fixed-class {
+     position: fixed;
+     top: 0;
+    //  top: 30px !important;
+     vertical-align: middle;
+     z-index: 0;
+     max-width: 900px;
+     margin: auto;
+     width: 100%;
+     left: 0;
+     right: 0;
+     border-top: 0 !important;
+     -webkit-box-shadow: 0 3px 2px -2px @gray-blue;
+     -moz-box-shadow: 0 3px 2px -2px @gray-blue;
+     box-shadow: 0 3px 2px -2px @gray-blue;
+  }
+
+  .hed {
+    font-family: @bold-graphics;
+    font-size: 30px;
+    color: #006BB6;
+    padding-bottom: 30px;
+    @media @mobile {
+      padding: 20px 0;
+    }
+  }
+  .deck {
+    font-size: 22px;
+    padding: 20px 0;
+    @media @mobile {
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+  .hed-wrapper {
+    max-width: 900px;
+    margin: auto;
+    padding: 0 30px;
+    @media @mobile {
+      padding: 0 10px;
+    }
+  }
+  .fact-container {
+    max-width: 900px;
+    text-align: left;
+    margin: auto;
+    height: 9%;
+    @media @tablet {
+      padding: 0 30px;
+      height: 12%;
+    }
+    @media @mobile {
+      height: 9%;
+      padding: 0 10px;
+    }
+    @media @mini-mobile {
+      height: 8%;
+    }
+    .season {
+      font-size: 20px;
+      font-family: @bold-graphics;
+      padding: 10px 0;
+      margin-bottom: 20px;
+      border-bottom: 1px solid @dark-gray;
+    }
+    .fact {
+      padding-bottom: 20px;
+    }
+    .desc {
+      @media @mobile {
+        font-size: 14px;
+      }
+      @media @mini-mobile {
+        font-size: 12px;
+      }
+    }
+    .score {
+      font-family: @med-graphics;
+      &.warscore {
+        color: #006BB6;
+      }
+      &.cavscore {
+        color: #860038;
+      }
+    }
+  }
+
+  .instructions {
+    font-family: @med-graphics;
+    .fa {
+      padding-left: 10px;
+      font-size: 20px;
+    }
+    @media @mobile {
+      text-align: center;
+      padding: 0 30px;
+    }
+  }
+
+  .axis path,
+  .axis line {
+      fill: none;
+      stroke: grey;
+      stroke-width: 1;
+      shape-rendering: crispEdges;
+  }
+  .thicklines {
+    stroke-width: 4;
+    fill: none;
+  }
+  .domain {
+    display: none;
+  }
+  svg {
+    margin: auto;
+    text-align: center;
+  }
+  .tick {
+    line {
+      display: none;
+    }
+  }
+  .node {
+    text {
+      font-family: @bold-graphics;
+    }
+  }
+  #line-chart {
+    text-align: center;
+    margin: auto;
+    // width: 90%;
+    // overflow-x:scroll;
+  }
+  text {
+    font-family: @block-graphics;
+    font-size: 14px;
+    stroke-width: 1;
+  }
+  .select-text {
+    font-family: @med-graphics;
+    display: inline-block;
+  }
+  .drop-down {
+    padding-top: 10px;
+    text-align: center;
+  }
+  .select-container {
+    display: inline-block;
+  }
+  #select-season {
+    pointer-events: all;
+    font-size: 16px;
+    min-width: 200px;
+    font-family: @block-graphics;
+    display: inline-block;
+    @media @mobile {
+      min-width: 0;
+    }
+  }
+  .button {
+    text-align: center;
+    pointer-events: all;
+    font-family: @bold-graphics;
+    // width: 100%;
+    cursor: pointer;
+    max-width: 200px;
+    margin: auto;
+    margin-top: 10px;
+    padding: 2px 20px;
+    background: #006BB6;
+    color: white;
+    border-radius: 2px;
+    &.active {
+      color: #006BB6;
+      background: white;
+      border: 2px solid #006BB6;
+    }
+  }
+  .interactive-box {
+    background: white;
+    padding: 30px 0;
+    padding-top: 50px;
+    // background: #F2F2F2;
+    height: 2500px;
+    @media @mobile {
+      padding-top: 40px;
+      height: 3000px;
+    }
+  }
+  #stick-ph {
+    height: 2500px;
+    @media @mobile {
+      height: 3000px;
+    }
+  }
+
+}
+
+.credit {
+  padding-top: 10px;
+  max-width: 900px;
+  margin: auto;
+  font-size: 14px;
+  font-family: @med-graphics;
+  @media @mobile {
+    padding: 0 30px;
+  }
+  a {
+    color: #006BB6;
+  }
+}
+
+.credit-container {
+  padding-bottom: 50px;
+}
+
+.link {
+  a {
+    color: #006BB6 !important;
+  }
+}
+
+.inline-img {
+  max-width: 500px;
+  background: rgba(255,255,255,0.4);
+  img {
+    width: 100%;
+    opacity: 0.5;
+    filter: alpha(opacity=40);
+  }
+  padding: 10px;
+  border: 2px solid #006BB6;
+}
+
+.photo-link {
+  font-family: @bold-graphics;
+  font-size: 18px;
+  a {
+    color: #006BB6 !important;
+  }
+  .fa {
+    padding-left: 5px;
+  }
+  @media @mobile {
+    width: 80%;
+    margin: auto;
+  }
+}
+.link-text {
+  text-align: center;
+}
